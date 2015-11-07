@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4A0581E-1292-4D74-831E-44B961E6D6C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CubiSoft.Ftp</RootNamespace>
+    <AssemblyName>CubiSoft.Ftp.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="FtpClient.cs" />
+    <Compile Include="FtpClientConfiguration.cs" />
+    <Compile Include="FtpException.cs" />
+    <Compile Include="FtpExtensions.cs" />
+    <Compile Include="FtpItem.cs" />
+    <Compile Include="FtpResponse.cs" />
+    <Compile Include="IFtpChannel.cs" />
+    <Compile Include="IFtpClient.cs" />
+    <Compile Include="Messages\FtCreateDirectoryRequest.cs" />
+    <Compile Include="Messages\FtpDeleteDirectoryRequest.cs" />
+    <Compile Include="Messages\FtpDeleteFileRequest.cs" />
+    <Compile Include="Messages\FtpDuplexReponse.cs" />
+    <Compile Include="Messages\FtpExtendedPassiveModeRequest.cs" />
+    <Compile Include="Messages\FtpExtendedPassiveModeResponse.cs" />
+    <Compile Include="Messages\FtpFeaturesRequest.cs" />
+    <Compile Include="Messages\FtpFeaturesResponse.cs" />
+    <Compile Include="Messages\FtpFileSizeRequest.cs" />
+    <Compile Include="Messages\FtpFileSizeResponse.cs" />
+    <Compile Include="Messages\FtpGetDirectoryRequest.cs" />
+    <Compile Include="Messages\FtpGetDirectoryResponse.cs" />
+    <Compile Include="Messages\FtpGetListingResponse.cs" />
+    <Compile Include="Messages\FtpListRequest.cs" />
+    <Compile Include="Messages\FtpModifiedTimeRequest.cs" />
+    <Compile Include="Messages\FtpModifiedTimeResponse.cs" />
+    <Compile Include="Messages\FtpOptionsRequest.cs" />
+    <Compile Include="Messages\FtpPassiveModeRequest.cs" />
+    <Compile Include="Messages\FtpPassiveModeResponse.cs" />
+    <Compile Include="Messages\FtpPasswordRequest.cs" />
+    <Compile Include="Messages\FtpQuitRequest.cs" />
+    <Compile Include="Messages\FtpRequest.cs" />
+    <Compile Include="Messages\FtpResponse.cs" />
+    <Compile Include="Messages\FtpRetrieveRequest.cs" />
+    <Compile Include="Messages\FtpSetDataTypeRequest.cs" />
+    <Compile Include="Messages\FtpSetDirectoryRequest.cs" />
+    <Compile Include="Messages\FtpStoreRequest.cs" />
+    <Compile Include="Messages\FtpUserRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamChannel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
