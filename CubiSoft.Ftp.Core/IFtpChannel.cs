@@ -28,6 +28,5 @@ namespace CubiSoft.Ftp
         Task<FtpGetListingResponse> GetListingAsync(string path = null);
 
         Task<T> ExecuteAsync<T>(FtpRequest request) where T : FtpResponse;
-    } 
-
+    }
 }
