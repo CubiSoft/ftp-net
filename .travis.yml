@@ -1,9 +1,10 @@
-## Travis CI Integration
-
-language: c
+language: csharp
+solution: ./src/yoursolution.sln
 
 install:
-  - sudo apt-get update && sudo apt-get install mono-devel mono-gmcs nunit-console
+  - sudo apt-get install nunit-console
+  - nuget restore CubiSoft.Ftp.Net.sln
+
 script:
   - xbuild CubiSoft.Ftp.Net.sln
-##  - nunit-console Artemis_Mono/bin/Debug/ArtemisMonoUnitTests.dll
+##  - nunit-console ./src/SomeLibrary.Tests/bin/Debug/SomeLibrary.Tests.dll
