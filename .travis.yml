@@ -1,5 +1,5 @@
 language: csharp
-solution: ./src/yoursolution.sln
+solution: ./CubiSoft.Ftp.Net.sln
 
 install:
   - sudo apt-get install nunit-console
